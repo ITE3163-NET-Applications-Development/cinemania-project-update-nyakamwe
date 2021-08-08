@@ -5,7 +5,7 @@ namespace CineMania.Models
     public class Message
     {
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
         [Required(ErrorMessage = "Your Name Is Required"), MaxLength(60,
              ErrorMessage = "Your Name Can't Go Beyond 60 Characters")]
         public string Name { get; set; }
