@@ -18,7 +18,7 @@ namespace CineMania.Migrations
 
             modelBuilder.Entity("CineMania.Models.Message", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -40,7 +40,7 @@ namespace CineMania.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("Messages");
                 });
