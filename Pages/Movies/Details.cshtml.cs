@@ -27,11 +27,10 @@ namespace CineMania.Pages.Movies
             {
                 return NotFound();
             }
-
-            Movie = await _context.Movies.FirstOrDefaultAsync(m => m.Id == id);
+           Movie = await _context.Movies.FirstOrDefaultAsync(m => m.Id == id);
             
-            MovieCategory = await _context.Movies.Where(m => m.Genre == Movie.Genre).
-                ToListAsync();
+            MovieCategory = await _context.Movies.Where(m => m.Genre == Movie.Genre && m.Id != id).
+              ToListAsync();
             if (Movie == null && MovieCategory == null)
             {
                 return NotFound();
